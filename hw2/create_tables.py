@@ -11,7 +11,7 @@ sql_create_table_users = """
 --DROP TABLE IF EXISTS USERS;
 CREATE TABLE USERS (
     id SERIAL PRIMARY KEY,
-    fullname VARCHAR(100) UNIQUE NOT NULL,
+    fullname VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL
 );
 """
