@@ -50,7 +50,7 @@ WHERE status_id IN (SELECT id
   where users.email like '%@example.com';
  
 --Отримати список завдань, що не мають опису. Виберіть завдання, у яких відсутній опис.
- select * from tasks where description = '';
+ select * from tasks where description is null or description = '';
 
 --Вибрати користувачів та їхні завдання, які є у статусі 'in progress'. Використайте INNER JOIN для отримання списку користувачів та їхніх завдань із певним статусом.
  select u.id, u.fullname as user, t.title as task
